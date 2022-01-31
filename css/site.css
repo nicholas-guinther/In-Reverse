@@ -84,3 +84,16 @@ code[class*="language-"],
 .checklist >li i{
     color:var(--purple-color)
 }
+
+.border-purple {
+    border-color: var(--purple-color)!important;
+}
+
+.alert-purple {
+    color: var(--white-color);
+    background-color: var(--purple-color);
+}
+
+hr:not([size]) {
+    height: 2px;
+}

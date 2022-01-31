@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Nicholas Guinther</title>
+    <title>In Reverse: A Coding Project By Nicholas Guinther</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,8 +49,33 @@
 </nav>
 
 <main class="flex-shrink-0">
-    <div class="container">
-
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <h1 class="display-5 fw-bold 1h-1 mb-3">In Reverse: A Coding Project</h1>
+                <h4 class="lead">A JavaScript coding exercise using arrays. Write a JavaScript program that displays 
+                    a string in reverse.</h4>
+            </div>
+            <div class="col">
+                <h5 class="border-2 border-bottom border-purple py-2">Enter a String To Reverse</h5>
+                <form class="row gx-3 gy-2">   
+                    <div class="col">
+                        <input id="userString" type="text" class="form-control" placeholder="Enter a String" aria-label="Enter a String">
+                    </div>
+                    <div class="col-12">
+                        <button type="button" id="btnSubmit" class="btn btn-outline-dark">Reverse Me</button>
+                        <button type="button" id="btnClear" class="btn btn-outline-dark">Clear</button>
+                    </div>
+                    <div class="alert alert-purple mt-5 invisible fade show" id="alert" role="alert">
+                        <h4 class="alert-heading">Results</h4>
+                        <hr>
+                        <p class="mb-0" id="msg">
+                            <!-- Insert A Message Here -->
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </main>
 
@@ -65,8 +90,8 @@
             </div>
             <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
                 <div class="row">
-                    <div class="col social"><a href="#" target="-blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
-                    <div class="col social"><a href="#" target="-blank"><i class="fab fa-github fa-2x"></i></a></div>
+                    <div class="col social"><a href="https://www.linkedin.com/in/nicholas-guinther/" target="-blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                    <div class="col social"><a href="https://github.com/nicholas-guinther" target="-blank"><i class="fab fa-github fa-2x"></i></a></div>
                     <div class="col social"><a href = "mailto: nicholasguinther@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></i></a></div>
                 </div>
             </div>
@@ -78,6 +103,10 @@
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
 </script>
 <script src="js/site.js"></script>
+<script>
+    document.getElementById("btnSubmit").addEventListener("click", getString);
+    document.getElementById("btnClear").addEventListener("click", clear);
+</script>
 </body>
 
 </html>

@@ -56,17 +56,79 @@
             <div class="col-lg-8">
                 <pre class="line-numbers">
                     <code class="language-javascript">
-                        // Call HelloWorld
-                        function HelloWorld(){
-                             alert("Hello World!");
+                        // Get the String from the page
+                        // Controller Function
+                        function getString(){
+                        
+                            document.getElementById("alert").classList.add("invisible");
+                        
+                            let userString = document.getElementById("userString").value;
+                        
+                            let revString = reverseString(userString);
+                        
+                            displayString(revString);
+                        }
+                        
+                        // Reverse the String
+                        // Logic Function
+                        function reverseString(userString){
+                            let revString = [];
+                        
+                            for (let index = userString.length - 1; index >= 0; index--) {
+                        
+                                revString += userString[index];
+                            }
+                        
+                            return revString;
+                        }
+                        
+                        // Display the Reversed String
+                        // View Function
+                        function displayString(revString){
+                        
+                            // Write the message to the page
+                            document.getElementById("msg").innerHTML = `Your String Reversed is: ${revString}`;
+                        
+                            // Show the alert box
+                            document.getElementById("alert").classList.remove("invisible");
+                        
+                        }
+                        
+                        function clear(){
+                        
+                            document.getElementById("userString").value = "";
+                            document.getElementById("alert").classList.add("invisible");
                         }
                     </code>
                 </pre>
             </div>
             <div class="col-lg-4">
-                <p>The Code is structured in one function.</p>
-                <h5>Hello World</h5>
-                <p>Hello World is a function that displays and alert with a message of "Hello World!"</p>
+                <p>The Code is structured in Four functions.</p>
+                <h5>getString()</h5>
+                <p>
+                    Get String is the controller function. It is responsible for making sure the alert is set to invisible,
+                     getting the user input from the page, assigning it to the userString variable, passing the variable to the reverseString logic
+                     function and assigning the result to a new reversed string variable, and lastly calling the display function to show the
+                     alert to the user.
+                </p>
+                <h5>reverseString(userString)</h5>
+                <p>
+                    Revers String is the logic function. It takes one parameter which is the string entered by the user.
+                     The function then creates and empty array to store the reversed version of the input string. A for 
+                     loop is then used to start at the last position of the string and work backwards adding each letter
+                     to the reversed string array. Once the loop concludes the reversed string is returned.
+                </p>
+                <h5>displayString(revString)</h5>
+                <p>
+                    Display String is the View function. It takes one parameter which is the reverse string created by the 
+                    reverseString() function. The function then adds the reversed string and a message to the alert box and 
+                    removes the invisible class from the class list making the alert box visible.
+                </p>
+                <h5>clear()</h5>
+                <p>
+                    The clear function takes not parameters. It is responsible for clearing the input field and making the
+                     alert box invisible again.
+                </p>
             </div>
         </div>
     </div>
@@ -83,8 +145,8 @@
             </div>
             <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
                 <div class="row">
-                    <div class="col social"><a href="#" target="-blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
-                    <div class="col social"><a href="#" target="-blank"><i class="fab fa-github fa-2x"></i></a></div>
+                    <div class="col social"><a href="https://www.linkedin.com/in/nicholas-guinther/" target="-blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                    <div class="col social"><a href="https://github.com/nicholas-guinther" target="-blank"><i class="fab fa-github fa-2x"></i></a></div>
                     <div class="col social"><a href = "mailto: nicholasguinther@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></i></a></div>
                 </div>
             </div>
