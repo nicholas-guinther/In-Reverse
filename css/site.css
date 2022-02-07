@@ -97,3 +97,11 @@ code[class*="language-"],
 hr:not([size]) {
     height: 2px;
 }
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: var(--purple-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(156 121 228 / 25%);
+}
